@@ -1,4 +1,4 @@
-const spisokLnk = document.querySelector('.insClass');
+const listLnk = document.querySelector('.insClass');
 
 let arr = [];
 
@@ -8,12 +8,12 @@ const run = async() => {
     console.log(arr);
 
     const html = arr.map((item) => {
-        const _html = `<div>${item.name} ${item.sex} ${item.age}</div>`;
+        const _html = `<li><b>${item.name}</b> (${item.sex}) ${item.age}</li>`;
         return _html;
     }).join('');
     console.log(html);
 
-    spisokLnk.innerHTML = html;
+    listLnk.innerHTML = html;
 }
 
 run();
